@@ -1,20 +1,12 @@
-# simple-login-go-mysql
-Just for fun :D Simple Login Go With Mysql
 
 # How to Run ?
-#1.Create The Database with name go_db
+#1.Create The Database with name go_db, check folder sql
 
-#2. Create Table 
-create table with name users
+#2.Login
+	username : fachri.nugraha@trakindo.co.id
+	pass : sanqua123456
 
-	CREATE TABLE `users` (
-	  `id` int(11) NOT NULL AUTO_INCREMENT,
-	  `username` varchar(50) DEFAULT NULL,
-	  `first_name` varchar(200) NOT NULL,
-	  `last_name` varchar(200) NOT NULL,
-	  `password` varchar(120) DEFAULT NULL
-	) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
+#3.Run
 #run
 you should import the library first
 
