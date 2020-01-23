@@ -1,0 +1,61 @@
+{{ define "home" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Welcome</title>
+
+      <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+  
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+</head>
+<body>
+        <nav>
+               <div class="nav-wrapper" style="background-color: #000000;">
+                  <a href="#" class="brand-logo" style="background-color: #000000;">
+                    <!-- <img src="https://www.trakindo.co.id/themes/custom/trakindo_2016/images/logo.png" width="150px;"> -->
+                  </a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                  </ul>
+                </div>
+              </nav>
+    <p>
+      <h3>Selamat Datang {{ .username }}</h3>
+    </p>
+
+    <table class="table1" style="width: 100%">
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Alamat</th>
+      </tr>
+      
+      {{ range . }}
+      <tr>
+        <td>{{ .Id }}</td>
+        <td> {{ .UserName }} </td>
+        <td>{{ .FirstName }} </td> 
+        <td><a href="/show?id={{ .Id }}">View</a> | <a href="/edit?id={{ .Id }}">Edit</a><td>
+      </tr>
+    {{ end }}
+      
+      
+    </table>
+    <div class="container" style="width: 100%;">
+            
+    </div>
+    
+</body>
+</html>
+{{ end }}
